@@ -1,0 +1,12 @@
+安卓课看到。Android Studio推荐更新了，然后就update。然后就炸了。唔，当时的问题是  Gradle sync failed.其实当时也百度了，找到了方法。
+现在记录一下以防忘了吧。一个共有三个错误。第二个就算了。
+1、Gradle sync failed:
+    首先找到C/user/admin/AndroidStudioProject 里的文件。随便找一项目。比如我拿“IntentClient”,找到  gradle/wrapper/gradle-wrapper.properties.
+  用记事本打开。最后一行  distributionUrl=https\://services.gradle.org/distributions/gradle-3.3-all.zip   代表符合当前版本的gradle，这个需要
+  手动下载，把网址打开，下载，无须解压，直接安装到C:\Users\admin\.gradle\wrapper\dists  下的文件夹。比如我现在要3.3  就把它放到
+  C:\Users\admin\.gradle\wrapper\dists\gradle-3.3-all\55gk2rcmfc6p2dg9u9ohc3hw9  文件夹下。嗯，就好了！完美
+
+2、一直处于Building 'xx' Gradle project info 这样的状态中。（很悲惨，还关不掉）
+    这个解决方法和那个一样。
+    
+    美滋滋
